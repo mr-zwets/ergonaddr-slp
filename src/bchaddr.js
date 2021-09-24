@@ -325,7 +325,7 @@ function decodeCashAddress (address) {
     } catch (error) {
     }
   } else {
-    var prefixes = ['bitcoincash', 'bchtest', 'regtest', 'bchreg']
+    var prefixes = ['bitcoincash', 'ergon']
     for (var i = 0; i < prefixes.length; ++i) {
       try {
         var prefix = prefixes[i]
@@ -357,6 +357,13 @@ function decodeCashAddressWithPrefix (address) {
           network: Network.Mainnet,
           type: type
         }
+        case 'ergon':
+          return {
+            hash: hash,
+            format: Format.Cashaddr,
+            network: Network.Mainnet,
+            type: type
+          }
       case 'bchtest':
       case 'regtest':
       case 'bchreg':

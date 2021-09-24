@@ -1,7 +1,7 @@
 {
-  "name": "bchaddrjs-slp",
+  "name": "ergonaddr-slp",
   "version": "0.2.14",
-  "description": "Bitcoin Cash and SLP general purpose address translation.",
+  "description": "Ergon SLP address library.",
   "main": "src/bchaddr.js",
   "types": "src/bchaddr.d.ts",
   "files": [
@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/simpleledger/bchaddrjs.git"
+    "url": "git+https://github.com/mr-zwets/ergonaddr-slp.git"
   },
   "keywords": [
-    "bitcoin-cash",
+    "ergon",
     "bitcoin",
-    "bch",
+    "xrg",
     "cryptocurrency",
     "address",
     "encoding",
@@ -43,9 +43,9 @@
   "author": "Emilio Almansi <hi@ealmansi.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/simpleledger/bchaddrjs/issues"
+    "url": "https://github.com/mr-zwets/ergonaddr-slp/issues"
   },
-  "homepage": "https://github.com/simpleledger/bchaddrjs#readme",
+  "homepage": "https://github.com/mr-zwets/ergonaddr-slp#readme",
   "devDependencies": {
     "browserify": "^15.2.0",
     "chai": "^4.1.2",
