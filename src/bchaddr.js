@@ -474,7 +474,7 @@ function encodeAsBitpay (decoded) {
  * @returns {string}
  */
 function encodeAsCashaddr (decoded) {
-  var prefix = decoded.network === Network.Mainnet ? 'bitcoincash' : 'bchtest'
+  var prefix = decoded.network === Network.Mainnet ? 'ergon' : 'bchtest'
   var type = decoded.type === Type.P2PKH ? 'P2PKH' : 'P2SH'
   var hash = Uint8Array.from(decoded.hash)
   return cashaddr.encode(prefix, type, hash)
