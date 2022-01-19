@@ -7,7 +7,7 @@
  */
 
 var bs58check = require('bs58check')
-var cashaddr = require('cashaddrjs-slp')
+var cashaddr = require('ergonaddrjs')
 
 /**
  * General purpose Bitcoin Cash address detection and translation.<br />
@@ -325,7 +325,7 @@ function decodeCashAddress (address) {
     } catch (error) {
     }
   } else {
-    var prefixes = ['bitcoincash', 'ergon']
+    var prefixes = ['bitcoincash', 'ergon', 'simpleledger']
     for (var i = 0; i < prefixes.length; ++i) {
       try {
         var prefix = prefixes[i]
@@ -474,7 +474,7 @@ function encodeAsBitpay (decoded) {
  * @returns {string}
  */
 function encodeAsCashaddr (decoded) {
-  var prefix = decoded.network === Network.Mainnet ? 'bitcoincash' : 'bchtest'
+  var prefix = decoded.network === Network.Mainnet ? 'ergon' : 'bchtest'
   var type = decoded.type === Type.P2PKH ? 'P2PKH' : 'P2SH'
   var hash = Uint8Array.from(decoded.hash)
   return cashaddr.encode(prefix, type, hash)
