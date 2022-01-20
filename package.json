@@ -62,6 +62,6 @@
   },
   "dependencies": {
     "bs58check": "^2.1.2",
-    "cashaddrjs-slp": "^0.2.12"
+    "ergonaddrjs": "^1.0.1"
   }
 }
